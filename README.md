@@ -176,7 +176,7 @@
 
 
 
-### 7. docker 볼륨 영속성 검증
+### 7. docker 볼륨 영속성 검증 (가설제시 및 검증)
 - docker volume create my-web-data
     - 도커 볼륨 생성
     - 이후 해당 볼륨과 함께 컨테이너 실행
@@ -205,7 +205,7 @@ docker run -d \
 
 
 ----
-### if 영속성 유지 없이 삭제할 경우
+### 검증 : 영속성 유지 없이 삭제할 경우
 - docker run -d -p 8080:80 --name simple-web my-custom-nginx
     - 단순 해당 명령으로 컨테이너 실행 후 강제 제거시 
     - 볼륨이 없기 때문에 파일이 유지되지 않음
