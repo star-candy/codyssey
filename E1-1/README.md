@@ -11,7 +11,7 @@
 ```
 
 - 실행 환경
-    - 깃 버전 : git version 2.51.0.windows.1
+    - 깃 버전 : git version 2.53.0
     - 도커 버전 : Docker version 28.5.2, build ecc6942
     - 터미널 : git bash
 
@@ -68,3 +68,32 @@
         - testing 폴더 제거됨
 
 
+### 2. 파일 경로 및 권한 변경 실습
+
+- 현재 test.txt 파일 위치
+    - /Users/candystella8115467/Documents/codyssey/E1-1/test.txt
+    - 파일 내용을 확인하기 위해 전체 경로를 입력하는 것이 절대 경로 방식
+        - ex) cat /Users/candystella8115467/Documents/codyssey/E1-1/test.txt
+    - 현재 폴더를 기준으로 상위 dir로 이동함을 의미하는 . 기호 사용하여 전체 경로 입력 생략 방식 (상대 경로)
+        - ex ) cat ./test.txt
+    ![alt text](image-9.png)
+
+
+- 특정 파일 권한 확인 및 변경 (chmod)
+    - ls -al 명령으로 파일 권한 확인
+        - 총 9개 문자를 3개씩 끊는 기준으로 owner, group, other의 권한
+        - access(x) write(w) read(r) 순서로 1, 2 ,4 값을 가짐
+        - 따라서 모두 모두에게 모든 권한이 열린 경우 777이다
+        - 권한 변경은 chmod (권한 숫자) (변경 파일) 순서로 구성
+        - 파일 및 디렉토리 권한 변경
+    ![alt text](image-10.png)
+    ![alt text](image-11.png)
+
+    ### 3. Docker 동작 확인
+    - docker --version. docker info 출력 결과
+     ![alt text](image-11.png)
+
+
+
+
+      ![alt text](image-13.png)
