@@ -210,6 +210,16 @@ docker run -d \
     - 단순 해당 명령으로 컨테이너 실행 후 강제 제거시 
     - 볼륨이 없기 때문에 파일이 유지되지 않음
 
+### 바운드 마운팅과의 차이점
+- 볼륨 : 데이터를 컨테이너 종료 여부와 관계없이 안전하게 보관하기 위함 (영속성 유지)
+- 바운드 마운트 : user 컴퓨터의 변경사항을 컨테이너에 동기화 하기 위함 
+- (user - host)의 폴더를 컨테이너에 연결
+''' docker run -d --name web-server -p 8080:80 -v "$(pwd)":/usr/share/nginx/html nginx'''
+- 이후 컨테이너와 연결된 폴더 접근 가능
+- MSYS_NO_PATHCONV=1 옵션으로 git bash 상의 경로 문제 오류 해결 가능
+- ![alt text](images111.png)
+
+-----
 ### 8. github 연동 및 로그인
 - ![alt text](image-26.png)
 - 코디세이 연동 리포지토리 생성
